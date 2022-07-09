@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid } from '@material-ui/core';
 import useStyles from './styles';
-import { Details } from './components';
+import { Details, Main } from './components';
 function App() {
   const classes = useStyles();
   return (
@@ -11,7 +11,7 @@ function App() {
           <Details title="Income" />
         </Grid>
         <Grid item xs={12} sm={3} className={classes.main}>
-          Main
+          <Main />
         </Grid>
         <Grid item xs={12} sm={4} className={classes.desktop}>
           <Details title="Income" />

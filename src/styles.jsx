@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
   desktop: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       display: 'none',
     },
   },
@@ -19,7 +19,7 @@ export default makeStyles((theme) => ({
   last: {
     [theme.breakpoints.down('sm')]: {
       marginBottom: theme.spacing(3),
-      paddingBottom: '200px',
+      // paddingBottom: '200px',
     },
   },
   grid: {

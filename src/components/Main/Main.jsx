@@ -9,7 +9,7 @@ const Main = () => {
         <Card className={classes.root}>
             <CardHeader
                 title="Audit Assistent"
-                subheader="Use it to keep a record of each penny." />
+                subheader="To record your every penny." />
             <CardContent>
                 <Typography align="center" variant="h5">Total Balance Rs. 100</Typography>
                 <Typography variant="subtitle1" style={{ lineHeight: '1.5em', marginTop: '20px' }}>

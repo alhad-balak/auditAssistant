@@ -17,10 +17,12 @@ function App() {
 
         <Grid item xs={12} md={3} sm={5}>
           <Grid className={classes.grid} container spacing={0} alignItems="center" justify="center">
-            <Grid item md={0} xs={12} m={0} className={[classes.desktop, classes.last]}>
+            <Grid item md={0} xs={12} m={0}
+              className={[classes.desktop, classes.last]}
+              style={{ margin: "0px" }}>
               <Details title="Income" />
             </Grid>
-            <Grid item md={12} xs={12} m={0} className={classes.last}>
+            <Grid item md={12} xs={12} spacing={0} className={classes.last} style={{ margin: "0px" }}>
               <Details title="Expense" />
             </Grid>
           </Grid>

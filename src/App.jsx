@@ -54,6 +54,7 @@ function App() {
           xs={12}
           md={3}
           sm={5}
+          style={{ margin: "0px" }}
         >
           <Grid
             className={classes.grid}
@@ -61,7 +62,8 @@ function App() {
             spacing={0}
             alignItems="center"
             justifyContent="center"
-            style={{ margin: "0px" }}>
+            style={{ margin: "0px" }}
+          >
             <Grid
               item
               md={false}
@@ -81,7 +83,12 @@ function App() {
           </Grid>
         </Grid>
 
-        {/* Can add "Hey! Assistant" inital to add transaction verbally. */}
+        {/* Can add "Hey! Assistant" inital to add transaction verbally. 
+        Features to be added- 
+        1. Google Authentication.
+        2. Save data on server for authenticated users.
+        3. Add Info for speaking tutorial and remove Infocard from Main.
+        4. Solve bugs if user say word "cool" or related then transcation of zero rupee has been added.*/}
 
         <PushToTalkButtonContainer>
           {/* <BigTranscript placement="top" /> */}

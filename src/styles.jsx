@@ -19,7 +19,8 @@ export default makeStyles((theme) => ({
   last: {
     [theme.breakpoints.down('sm')]: {
       marginBottom: theme.spacing(3),
-      // paddingBottom: '200px',
+      paddingBottom: '140px',
+      // margin: theme.spacing(3),
     },
   },
   grid: {
@@ -27,4 +28,13 @@ export default makeStyles((theme) => ({
       margin: theme.spacing(2),
     },
   },
+  income: {
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: theme.spacing(3),
+      // paddingBottom: '200px',
+    },
+  }
 }));

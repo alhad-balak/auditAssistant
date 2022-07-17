@@ -88,7 +88,8 @@ function App() {
         1. Google Authentication.
         2. Save data on server for authenticated users.
         3. Add Info for speaking tutorial and remove Infocard from Main.
-        4. Solve bugs if user say word "cool" or related then transcation of zero rupee has been added.*/}
+        4. Solve bugs if user say word "cool" or related then transcation of zero rupee has been added.
+        5. Change name to audistant*/}
 
         <PushToTalkButtonContainer>
           {/* <BigTranscript placement="top" /> */}

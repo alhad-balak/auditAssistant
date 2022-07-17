@@ -49,7 +49,7 @@ const NewTransactionForm = () => {
       }
 
       segment.entities.forEach((s) => {
-        const category = `₹{s.value.charAt(0)}₹{s.value.slice(1).toLowerCase()}`;
+        const category = `${s.value.charAt(0)}${s.value.slice(1).toLowerCase()}`;
 
         switch (s.type) {
           case 'amount':

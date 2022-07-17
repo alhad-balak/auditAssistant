@@ -10,13 +10,12 @@ Chart.register(ArcElement);
 const DetailsCard = ({ title, subheader }) => {
   const { total, chartData } = useTransactions(title);
   const classes = useStyles();
-  console.log(chartData)
 
   return (
     <Card className={title === 'Income' ? classes.income : classes.expense}>
       <CardHeader title={title} subheader={subheader} />
       <CardContent >
-        <Typography variant="h5">₹{total}</Typography>
+        <Typography variant="h5">${total}</Typography>
         {/* <Box className={classes.chart}> */}
         {chartData.labels.length !== 0 && (<Doughnut data={chartData} height='100px' />)}
         {/* </Box> */}

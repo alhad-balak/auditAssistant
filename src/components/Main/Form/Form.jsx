@@ -20,7 +20,9 @@ const NewTransactionForm = () => {
   const { addTransaction } = useContext(AuditAssistantContext);
   const [formData, setFormData] = useState(initialState);
   const { segment } = useSpeechContext();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [alertType, setAlertType] = useState('success');
+  const [alertMsg, setAlertMsg] = useState('Transaction added successfully!');
 
   const createTransaction = () => {
     if (Number.isNaN(Number(formData.amount)) || !formData.date.includes('-')) return;
@@ -30,10 +32,18 @@ const NewTransactionForm = () => {
     } else if (expenseCategories.map((iC) => iC.type).includes(formData.category)) {
       setFormData({ ...formData, type: 'Expense' });
     }
-
-    setOpen(true);
-    addTransaction({ ...formData, amount: Number(formData.amount), id: uuidv4() });
-    setFormData(initialState);
+    if (formData.amount !== '' && formData.category !== '' && formData.date !== '' && formData.type !== '') {
+      setAlertType('success');
+      setAlertMsg('Transaction added successfully!');
+      setOpen(true);
+      addTransaction({ ...formData, amount: Number(formData.amount), id: uuidv4() });
+      setFormData(initialState);
+    }
+    else {
+      setAlertType('error');
+      setAlertMsg('Please fill all the fields.');
+      setOpen(true);
+    }
   };
 
   useEffect(() => {
@@ -80,7 +90,7 @@ const NewTransactionForm = () => {
 
   return (
     <Grid container spacing={2}>
-      <Snackbar open={open} setOpen={setOpen} />
+      <Snackbar open={open} setOpen={setOpen} type={alertType} msg={alertMsg} />
       <Grid item xs={12}>
         {/* We can improve this. */}
         <Typography align="center" variant="subtitle2" gutterBottom>

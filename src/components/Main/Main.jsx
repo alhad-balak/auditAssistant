@@ -15,7 +15,7 @@ const AuditAssistant = () => {
     <Card className={classes.root}>
       <CardHeader title="AudIstant" subheader="An assistant to track of every penny!" />
       <CardContent>
-        <Typography align="center" variant="h5">Total Balance ${balance}</Typography>
+        <Typography align="center" variant="h5">Total Balance ₹{balance}</Typography>
         <Typography variant="subtitle1" style={{ lineHeight: '1.5em', marginTop: '20px' }}>
           <InfoCard />
         </Typography>

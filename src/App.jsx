@@ -96,7 +96,7 @@ function App() {
           <PushToTalkButton
             placement="bottom"
             captureKey=" "
-            intro="Push & Speak"
+            intro="Hold & Speak"
             size='70px'
           />
           {/* <IntroPopup /> */}

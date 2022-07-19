@@ -41,7 +41,7 @@ const NewTransactionForm = () => {
     }
     else {
       setAlertType('error');
-      setAlertMsg('Please fill all the fields.');
+      setAlertMsg('Please fill all the transaction details.');
       setOpen(true);
     }
   };
@@ -82,6 +82,10 @@ const NewTransactionForm = () => {
 
       if (segment.isFinal && formData.amount && formData.category && formData.type && formData.date) {
         createTransaction();
+      } else if (segment.isFinal && (!formData.amount || !formData.category || !formData.type || !formData.date)) {
+        setAlertType('error');
+        setAlertMsg('Please mention all the transaction details.');
+        setOpen(true);
       }
     }
   }, [segment]);
